@@ -15,10 +15,21 @@ export default {
       description: ''
     });
 
+    const formatDate = (dateString) => {
+      const date = new Date(dateString);
+      const year = date.getFullYear();
+      const month = String(date.getMonth() + 1).padStart(2, '0');
+      const day = String(date.getDate()).padStart(2, '0');
+      return `${year}-${month}-${day}`;
+    };
+
     const getRequest = async () => {
       try {
         const response = await axios.get(`http://localhost:8080/healthcenters/${route.params.id}`);
         request.value = response.data;
+        if (request.value.date) {
+          request.value.date = formatDate(request.value.date);
+        }
       } catch (error) {
         console.error('Error fetching the request:', error);
       }
@@ -33,6 +44,15 @@ export default {
       }
     };
 
+    const deleteRequest = async () => {
+      try {
+        await axios.delete(`http://localhost:8080/healthcenters/${route.params.id}`);
+        router.push('/requests');
+      } catch (error) {
+        console.error('Error deleting the request:', error);
+      }
+    };
+
     const cancelEdit = () => {
       router.push('/requests');
     };
@@ -42,6 +62,7 @@ export default {
     return {
       request,
       updateRequest,
+      deleteRequest,
       cancelEdit
     };
   }
@@ -71,6 +92,7 @@ export default {
       <div>
         <button type="submit">Save Changes</button>
         <button type="button" @click="cancelEdit">Cancel</button>
+        <button type="button" @click="deleteRequest">Delete</button>
       </div>
     </form>
   </div>

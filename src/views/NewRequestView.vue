@@ -7,7 +7,7 @@ export default {
     return {
       request: {
         name: '',
-        date: '',
+        date: this.formatDate(new Date()),
         subject: '',
         description: ''
       }
@@ -26,10 +26,16 @@ export default {
     resetForm() {
       this.request = {
         name: '',
-        date: '',
+        date: this.formatDate(new Date()),
         subject: '',
         description: ''
       };
+    },
+    formatDate(date) {
+      const year = date.getFullYear();
+      const month = String(date.getMonth() + 1).padStart(2, '0');
+      const day = String(date.getDate()).padStart(2, '0');
+      return `${year}-${month}-${day}`;
     }
   }
 };
@@ -57,7 +63,7 @@ export default {
       </div>
       <button type="submit">Create</button>
       <button type="button" @click="resetForm">Reset</button>
-      <router-link to="/requests">Cancel</router-link>
+      <router-link to="/">Cancel</router-link>
     </form>
   </div>
 </template>

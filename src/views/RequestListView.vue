@@ -16,6 +16,11 @@ export default {
       .catch(error => {
         console.error(error);
       });
+  },
+  methods: {
+    goToWelcomePage() {
+      this.$router.push('/');
+    }
   }
 };
 </script>
@@ -29,5 +34,6 @@ export default {
         <router-link :to="'/edit-request/' + request.id">Edit</router-link>
       </li>
     </ul>
+    <button @click="goToWelcomePage">Go to Welcome Page</button>
   </div>
 </template>
