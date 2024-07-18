@@ -14,6 +14,8 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ```sh
 npm install
+
+npm install axios
 ```
 
 ### Compile and Hot-Reload for Development

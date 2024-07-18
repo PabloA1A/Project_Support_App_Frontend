@@ -27,7 +27,7 @@ export default {
 
 <template>
   <div class="request-list">
-    <img src="/src/assets/img/background.jpg" class="background-image"></img> 
+    <img src="/src/assets/img/background.jpg" class="background-image"></img>
     <div class="content">
       <h1>List of Applications</h1>
       <ul>
@@ -82,7 +82,7 @@ ul {
   list-style-type: none;
   padding: 0;
   margin: 0 auto;
-  max-width: 90%; 
+  max-width: 90%;
 }
 
 .request-item {
@@ -94,10 +94,10 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: transform 0.2s ease; 
-  overflow: hidden; 
+  transition: transform 0.2s ease;
+  overflow: hidden;
   max-width: 100%;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 .request-item:hover {
@@ -125,13 +125,13 @@ p {
   margin: 0 10px;
   padding: 10px 20px;
   background-color: #007bff;
-  color: #fff; 
+  color: #fff;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
 .action-button:hover {
-  background-color: #0056b3; 
+  background-color: #0056b3;
 }
 </style>

@@ -114,7 +114,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/src/assets/img/background.jpg'); 
+  background-image: url('/src/assets/img/background.jpg');
   background-size: cover;
   background-position: center;
   filter: brightness(0.5);
@@ -131,7 +131,7 @@ export default {
 .request-form {
   max-width: 600px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.9); 
+  background: rgba(255, 255, 255, 0.9);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -150,7 +150,7 @@ export default {
 
 .form-group input,
 .form-group textarea {
-  width: calc(100% - 20px); 
+  width: calc(100% - 20px);
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
