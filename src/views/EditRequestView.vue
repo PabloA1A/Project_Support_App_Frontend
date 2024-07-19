@@ -63,8 +63,10 @@ export default {
       request,
       updateRequest,
       deleteRequest,
-      cancelEdit
-    };
+      cancelEdit,
+      formatDate,
+      getRequest
+  };
   }
 };
 </script>

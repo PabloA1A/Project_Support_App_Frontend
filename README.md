@@ -16,6 +16,8 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 npm install
 
 npm install axios
+
+npm install vitest@2.0.3 @vitest/coverage-v8 --save-dev
 ```
 
 ### Compile and Hot-Reload for Development
