@@ -6,7 +6,7 @@ export default {
 
 <template>
   <div class="welcome">
-    <img src="/src/assets/img/background.jpg" class="background-image"></img> 
+    <img src="/src/assets/img/background.jpg" class="background-image"></img>
     <div class="content">
       <h1>Welcome to the Support App</h1>
       <div class="buttons-container">
@@ -42,18 +42,18 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/images/background.jpg'); 
-  background-size: cover; 
-  background-position: center; 
+  background-image: url('/images/background.jpg');
+  background-size: cover;
+  background-position: center;
   filter: brightness(0.5);
 }
 
 .content {
   position: relative;
-  z-index: 1; 
+  z-index: 1;
   text-align: center;
   padding: 20px;
-  color: #fff; 
+  color: #fff;
 }
 
 .buttons-container {
@@ -65,14 +65,14 @@ export default {
   margin: 0 10px;
   padding: 10px 20px;
   background-color: #007bff;
-  color: #fff; 
+  color: #fff;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
 .action-button:hover {
-  background-color: #0056b3; 
+  background-color: #0056b3;
 }
 
 .center-info {

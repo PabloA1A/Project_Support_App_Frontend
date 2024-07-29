@@ -9,7 +9,7 @@ export default {
     };
   },
   created() {
-    axios.get('http://localhost:8080/healthcenters')
+    axios.get('http://localhost:8080/patients')
       .then(response => {
         this.requests = response.data;
       })

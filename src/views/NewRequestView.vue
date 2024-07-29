@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     createRequest() {
-      axios.post('/healthcenters', this.request)
+      axios.post('/patients', this.request)
         .then(response => {
           this.$router.push('/requests');
         })

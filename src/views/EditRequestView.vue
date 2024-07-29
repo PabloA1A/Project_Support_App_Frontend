@@ -25,7 +25,7 @@ export default {
 
     const getRequest = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/healthcenters/${route.params.id}`);
+        const response = await axios.get(`http://localhost:8080/patients/${route.params.id}`);
         request.value = response.data;
         if (request.value.date) {
           request.value.date = formatDate(request.value.date);
@@ -37,7 +37,7 @@ export default {
 
     const updateRequest = async () => {
       try {
-        await axios.put(`http://localhost:8080/healthcenters/${route.params.id}`, request.value);
+        await axios.put(`http://localhost:8080/patients/${route.params.id}`, request.value);
         router.push('/requests');
       } catch (error) {
         console.error('Error updating the request:', error);
@@ -46,7 +46,7 @@ export default {
 
     const deleteRequest = async () => {
       try {
-        await axios.delete(`http://localhost:8080/healthcenters/${route.params.id}`);
+        await axios.delete(`http://localhost:8080/patients/${route.params.id}`);
         router.push('/requests');
       } catch (error) {
         console.error('Error deleting the request:', error);
